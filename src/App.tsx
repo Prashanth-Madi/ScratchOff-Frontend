@@ -4,6 +4,7 @@ import './styles/App.css';
 import  {HomePage}  from './Components/HomePage';
 import { createBrowserRouter,RouterProvider } from "react-router-dom"
 import { ContextProvider } from './context/CartContext';
+import { SignIn } from './Components/SignInPage';
 
 
 
@@ -16,6 +17,10 @@ function App() {
     {
       path:'/cart',
       element:<Cart/>
+    },
+    {
+      path:'/signin',
+      element:<SignIn/>
     }
   ])
   
