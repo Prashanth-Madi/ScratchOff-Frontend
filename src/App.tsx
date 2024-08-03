@@ -5,6 +5,7 @@ import  {HomePage}  from './Components/HomePage';
 import { createBrowserRouter,RouterProvider } from "react-router-dom"
 import { ContextProvider } from './context/CartContext';
 import { SignIn } from './Components/SignInPage';
+import { SignUp } from './Components/SignUpPage';
 
 
 
@@ -12,16 +13,21 @@ function App() {
   const router=createBrowserRouter([
     {
       path:"/",
-      element:<HomePage />
+      element:<SignIn/>
+    },
+    {
+      path:'/homepage',
+      element:<HomePage/>
     },
     {
       path:'/cart',
       element:<Cart/>
     },
     {
-      path:'/signin',
-      element:<SignIn/>
-    }
+      path:'/signup',
+      element:<SignUp/>
+    },
+
   ])
   
   return (
